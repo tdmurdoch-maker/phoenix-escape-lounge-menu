@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phoenix Escape Lounge · Autumn Seasonal Collection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ivory: #f8f5f0;
+      --cream: #f3efe6;
+      --paper: #fbf7f5;
+      --gold: #b8956a;
+      --gold-light: #d4c4a8;
+      --dark: #1a1612;
+      --text: #2c2824;
+      --muted: #6b645c;
+      --notice-bg: #f5efe6;
+      --notice-border: #d4c4a8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: linear-gradient(180deg, #f8f5f0 0%, #f0ebe3 100%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    .leaf-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23b8956a' d='M50 10c5 15 20 25 30 30-10 5-25 10-30 25-5-15-20-20-30-25 10-5 25-15 30-30z'/%3E%3C/svg%3E");
+      background-size: 120px;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+      position: relative;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--gold-light);
+    }
+
+    .collection {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      font-size: clamp(2.2rem, 6vw, 3.2rem);
+      letter-spacing: 0.02em;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.35rem;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .drinks {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .drink {
+      padding-bottom: 1.75rem;
+      border-bottom: 1px solid rgba(184, 149, 106, 0.25);
+    }
+
+    .drink:last-child { border-bottom: none; }
+
+    .drink-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.6rem;
+    }
+
+    .drink-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem;
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    .spirits {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .description {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      color: var(--text);
+      font-weight: 400;
+      line-height: 1.55;
+    }
+
+    .notice {
+      background: var(--notice-bg);
+      border: 1px solid var(--notice-border);
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.95rem;
+    }
+
+    .notice strong {
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--gold-light);
+    }
+
+    .crafted {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .lounge-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.15em;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+
+    .policy {
+      font-size: 0.8rem;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 1.75rem 1.25rem 3rem; }
+      .drink-header { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+      .drink-name { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="leaf-bg"></div>
+  <div class="container">
+    <header>
+      <div class="collection">Autumn Seasonal Collection</div>
+      <h1>Phoenix Escape Lounge</h1>
+      <div class="subtitle">Handcrafted Fall Cocktails & Signature Elixirs</div>
+    </header>
+
+    <div class="drinks">
+      <article class="drink">
+        <div class="drink-header">
+          <h2 class="drink-name">The Liquid Apple Pie</h2>
+          <span class="spirits">Whisky · Vodka · Tequila</span>
+        </div>
+        <p class="description">House-spiced apple juice, clove tea reduction, and fresh lemon juice. Evoking warm notes of baked apple pie and crisp autumn evenings, served on the rocks with a splash of club soda and a lemon wedge.</p>
+      </article>
+
+      <article class="drink">
+        <div class="drink-header">
+          <h2 class="drink-name">Dusty Sunset Mule</h2>
+          <span class="spirits">Gin · Tequila · Vodka</span>
+        </div>
+        <p class="description">Freshly squeezed lemon juice, a delicate touch of pure cane simple syrup, and ruby grapefruit splash, lengthened with spicy craft ginger beer over crushed ice.</p>
+      </article>
+
+      <article class="drink">
+        <div class="drink-header">
+          <h2 class="drink-name">Raspberry Tart</h2>
+          <span class="spirits">Vodka · Gin</span>
+        </div>
+        <p class="description">Wild raspberry syrup, fresh-pressed lemon juice, and sparkling effervescence. Served as a vibrant, refreshing spritz with an expressed lemon twist.</p>
+      </article>
+
+      <article class="drink">
+        <div class="drink-header">
+          <h2 class="drink-name">Fresh Espresso-Tini</h2>
+          <span class="spirits">Vodka</span>
+        </div>
+        <p class="description">Vodka, fresh-pulled espresso, and house-made vanilla bean simple syrup, shaken vigorously and served up with floating roasted coffee beans.</p>
+      </article>
+
+      <div class="notice">
+        <strong>Guest Notice:</strong> Made with fresh espresso! The coffee machine is located by the buffet—please bring a single shot of fresh espresso to the bartender to enjoy this creation.
+      </div>
+
+      <article class="drink">
+        <div class="drink-header">
+          <h2 class="drink-name">Classic Skinny Margarita</h2>
+          <span class="spirits">Blanco Tequila</span>
+        </div>
+        <p class="description">100% blue agave blanco tequila, premium orange liqueur, house-made agave nectar, and crisp fresh lime juice. Served on the rocks with a delicate sea salt rim.</p>
+      </article>
+
+      <article class="drink">
+        <div class="drink-header">
+          <h2 class="drink-name">An Old Fashioned</h2>
+          <span class="spirits">Bourbon Whisky</span>
+        </div>
+        <p class="description">Bourbon whisky stirred with Angostura and aromatic orange bitters, rich Luxardo maraschino syrup, and finished with expressed orange oils and a dark Luxardo cherry.</p>
+      </article>
+
+      <article class="drink">
+        <div class="drink-header">
+          <h2 class="drink-name">Manhattan</h2>
+          <span class="spirits">Rye Whisky</span>
+        </div>
+        <p class="description">Rye whisky stirred to silky perfection with sweet vermouth and aromatic bitters. Served up in a chilled coupe glass with an authentic Luxardo cherry.</p>
+      </article>
+
+      <article class="drink">
+        <div class="drink-header">
+          <h2 class="drink-name">French 75</h2>
+          <span class="spirits">London Dry Gin</span>
+        </div>
+        <p class="description">London dry gin, house-made simple syrup, and fresh lemon juice, topped with chilled effervescent sparkling wine and garnished with an expressed lemon ribbon.</p>
+      </article>
+    </div>
+
+    <footer>
+      <div class="crafted">Crafted with not-from-concentrate fresh citrus juices & house infusions</div>
+      <div class="lounge-name">Phoenix Escape Lounge</div>
+      <p class="policy">3 to 4 beverages an hour max, depending on tolerance. Must be 21 today's date to drink, one beverage at a time.</p>
+    </footer>
+  </div>
+</body>
+</html>
