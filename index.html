@@ -167,8 +167,32 @@
       font-size: 0.8rem;
       color: var(--muted);
       max-width: 480px;
-      margin: 0 auto;
+      margin: 0 auto 1.5rem;
       line-height: 1.5;
+    }
+
+    .qr-block {
+      margin-top: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .qr-block img {
+      width: 140px;
+      height: 140px;
+      border-radius: 8px;
+      background: white;
+      padding: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .qr-caption {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
     }
 
     @media (max-width: 480px) {
@@ -261,6 +285,11 @@
       <div class="crafted">Crafted with not-from-concentrate fresh citrus juices & house infusions</div>
       <div class="lounge-name">Phoenix Escape Lounge</div>
       <p class="policy">3 to 4 beverages an hour max, depending on tolerance. Must be 21 today's date to drink, one beverage at a time.</p>
+
+      <div class="qr-block">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0AQMAAAAHA5RxAAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAB1ElEQVRYhcWXQY6DMAxFHbFgmSNwE3IxRKh6MbgJR8gyC4TnfyczqkbqMiRVq+plwZftbxuRLyeq6iVDWv0rOd3HfQTQszlf8OzFv5P4mx+Zx11kfIBPevKOenAHtqv25l5TBN3F5Uc5ouSSSwEZ2Z/ilpfLswpur9Tzka/nudUn6oR5mf2R58+6bch/3bchNwI98z9XPs2h84xQuqFCDzhVcxj33J4v01s39IfIOklwKfIS2B8ac6n9AUpSjYFSTy8eIWmA0kinolsdoEHac5kuYX9Y/ebBJOSA3358OFmbG/65Oi9Aka/WHHRSfeuNCFWfiljdtuWIAyvU049zmVJS89KFR2i8qFbEfHojM0V/W455ATXlBpUw3syM+bcPj5he9Ap9Cr+IzTDzaWvOCHFe2x37ZMlLYz5UumJb0uSyY1ZyP45+hfrE/iaubA9/eWnLF4vQ5elTVGi2HsH67MYXTK8FPn3ZvOYGp/IEx8ROnBirt95gUTqbczvmxxcJnCG2N/biZX9T61TIi6I/5JClObd9lX6t+/NNPT15fY+weQ2fBlI9H+KXFJ+qHqD6GN/ox1IN3BtF+nF+fZnXnBc41adteX1/4eaoZW+v/bkT/3J+AM1gyDao3P1nAAAAAElFTkSuQmCC" alt="QR code to scan this menu">
+        <div class="qr-caption">Scan for menu</div>
+      </div>
     </footer>
   </div>
 </body>
